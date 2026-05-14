@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Map Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="left-side">
+        <header class="masthead">
+          <h1>Map Quiz. Please double click on the map the location of:</h1>
+        </header>
+
+        <!-- timer + high score -->
+        <div class="status-row">
+          <span id="timer" class="timer">Time: 0.0s</span>
+          <span id="best" class="best"></span>
+        </div>
+
+        <section class="questions">
+          <!-- past questions -->
+          <div id="quiz-history" class="quiz-history"></div>
+
+          <!-- current active question -->
+          <div id="current-question" class="main-location-question">
+            <p id="location-question"></p>
+          </div>
+
+          <!-- final score -->
+          <div id="score" class="score" style="display: none">
+            <h2 id="score-result"></h2>
+            <p id="final-time" class="final-time"></p>
+            <p id="new-best" class="new-best"></p>
+          </div>
+        </section>
+      </div>
+
+      <!-- map -->
+      <section class="map-container">
+        <div id="map" class="map"></div>
+      </section>
+    </div>
+
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCptdSkWh0G3qXQNr7FThKeGFaWYWfw2Pg&libraries=places"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
